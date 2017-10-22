@@ -279,7 +279,7 @@ function civicrm_config(&$config) {
 
     $extraSettings[] = sprintf('$civicrm_paths[\'wp.frontend.base\'][\'url\'] = %s;', var_export(home_url() . '/', 1));
     $extraSettings[] = sprintf('$civicrm_paths[\'wp.backend.base\'][\'url\'] = %s;', var_export(admin_url(), 1));
-    $extraSettings[] = sprintf('$civicrm_setting[\'URL Preferences\'][\'userFrameworkResourceURL\'] = %s;', var_export(plugin_dir_url(CIVICRM_PLUGIN_FILE) . 'civicrm', 1));
+    $extraSettings[] = sprintf('$civicrm_setting[\'URL Preferences\'][\'userFrameworkResourceURL\'] = %s;', var_export(plugin_dir_url(CIVICRM_PLUGIN_FILE) . 'civicrm/', 1));
   }
 
   if ($extraSettings) {
